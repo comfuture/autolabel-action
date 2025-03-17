@@ -21,7 +21,6 @@ runs:
   image: Dockerfile
   env:
     GITHUB_TOKEN: ${{ inputs.github_token }}
-    GITHUB_REPOSITORY: ${{ github.repository }}
 
 branding:
   icon: tag
