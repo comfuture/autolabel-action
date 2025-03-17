@@ -1,0 +1,10 @@
+[project]
+name = "autolabel-action"
+version = "0.1.0"
+description = "Automatically label issues and pull requests based on their content."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "openai>=1.66.3",
+    "pygithub>=2.6.1",
+]

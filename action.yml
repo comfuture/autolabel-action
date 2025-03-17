@@ -1,0 +1,28 @@
+name: Auto Lablel
+description: Automatically label issues and pull requests based on their content.
+author: comfuture
+
+inputs:
+  github_token:
+    description: "GitHub token with repo scope"
+    required: false
+    default: ${{ github.token }}
+  labels:
+    description: "Comma-separated list of labels to apply"
+    required: false
+    default: "bug,enhancement,question"
+
+outputs:
+  labels:
+    description: "Labels applied to the issue or pull request"
+
+runs:
+  using: docker
+  image: Dockerfile
+  env:
+    GITHUB_TOKEN: ${{ inputs.github_token }}
+    GITHUB_REPOSITORY: ${{ github.repository }}
+
+branding:
+  icon: tag
+  color: "blue"
