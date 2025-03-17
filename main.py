@@ -3,7 +3,7 @@ from openai import OpenAI
 
 client = OpenAI(
     base_url="https://models.inference.ai.azure.com",
-    api_key=os.environ["INPUT_GITHUB_TOKEN"],
+    api_key=os.getenv("INPUT_GITHUB_TOKEN"),
 )
 
 
