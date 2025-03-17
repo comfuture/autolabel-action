@@ -13,4 +13,5 @@ jobs:
       - name: Run autolabel action
         uses: ./
         with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           labels: "bug,enhancement,question"
